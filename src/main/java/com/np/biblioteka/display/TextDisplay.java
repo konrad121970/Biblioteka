@@ -12,10 +12,10 @@ import java.io.IOException;
 
 public class TextDisplay implements Display {
 
-    private Terminal terminal;
-    private Screen screen;
-    private VirtualScreen virtualScreen;
-    private MultiWindowTextGUI gui;
+    private final Terminal terminal;
+    private final Screen screen;
+    private final VirtualScreen virtualScreen;
+    private final MultiWindowTextGUI gui;
 
     public TextDisplay() throws IOException {
         this.terminal = new DefaultTerminalFactory().createTerminal();
@@ -28,5 +28,19 @@ public class TextDisplay implements Display {
     }
 
 
+    public Terminal getTerminal() {
+        return terminal;
+    }
 
+    public Screen getScreen() {
+        return screen;
+    }
+
+    public VirtualScreen getVirtualScreen() {
+        return virtualScreen;
+    }
+
+    public MultiWindowTextGUI getGui() {
+        return gui;
+    }
 }

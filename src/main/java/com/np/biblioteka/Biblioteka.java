@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class Biblioteka {
 
-    private static Logger logger = Logger.getLogger(Biblioteka.class.getName());
+    private static final Logger logger = Logger.getLogger(Biblioteka.class.getName());
     private static Biblioteka instance;
 
     public static Biblioteka getInstance() {

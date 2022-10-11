@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "authors", schema = "biblioteka", catalog = "")
+@Table(name = "authors", schema = "biblioteka")
 public class  Author {
     private int id;
     private String firstName;

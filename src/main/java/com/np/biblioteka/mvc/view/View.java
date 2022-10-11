@@ -5,7 +5,7 @@ import com.np.biblioteka.display.Display;
 
 public abstract class View implements Renderable {
 
-    private Display display;
+    private final Display display;
 
     public View() {
         display = Biblioteka.getInstance().getDisplay();
