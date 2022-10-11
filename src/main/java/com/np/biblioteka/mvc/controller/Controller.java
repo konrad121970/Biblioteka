@@ -27,10 +27,6 @@ public abstract class Controller {
             Biblioteka.getLogger().severe("View " + viewName + "not found (searched in " + className + ")");
             e.printStackTrace();
             System.exit(1);
-        } catch (InstantiationException e) {
-            Biblioteka.getLogger().severe("Could not instantinate view " + className);
-            e.printStackTrace();
-            System.exit(1);
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(1);
