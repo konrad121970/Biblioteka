@@ -1,7 +1,7 @@
 package com.np.biblioteka.mvc.view;
 
 import com.np.biblioteka.Biblioteka;
-import com.np.biblioteka.display.Display;
+import com.np.biblioteka.Display;
 
 public abstract class View implements Renderable {
 
@@ -9,5 +9,9 @@ public abstract class View implements Renderable {
 
     public View() {
         display = Biblioteka.getInstance().getDisplay();
+    }
+
+    public Display getDisplay() {
+        return display;
     }
 }

@@ -1,9 +1,6 @@
 package com.np.biblioteka;
 
-import com.np.biblioteka.mvc.controller.Controller;
-import com.np.biblioteka.mvc.controller.UserController;
-import com.np.biblioteka.display.Display;
-import com.np.biblioteka.display.TextDisplay;
+import com.np.biblioteka.mvc.MVC;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -25,7 +22,8 @@ public class Biblioteka {
 
     private Biblioteka() {
         try {
-            display = new TextDisplay();
+            display = new Display();
+
         }
         catch(IOException e) {
             logger.severe("Could not create display");
@@ -35,8 +33,7 @@ public class Biblioteka {
     }
 
     public void start() {
-        Controller defaultController = new UserController();
-        defaultController.view();
+        MVC.controller();
     }
 
 

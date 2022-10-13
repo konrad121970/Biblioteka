@@ -1,6 +1,7 @@
 package com.np.biblioteka.mvc.controller;
 
 import com.np.biblioteka.Biblioteka;
+import com.np.biblioteka.mvc.MVC;
 import com.np.biblioteka.mvc.view.View;
 
 import java.lang.reflect.Constructor;
@@ -38,7 +39,7 @@ public abstract class Controller {
     }
 
     public void view() {
-        String viewName = "Index";
+        String viewName = MVC.DEFAULT_METHOD;
         view(viewName);
     }
 
