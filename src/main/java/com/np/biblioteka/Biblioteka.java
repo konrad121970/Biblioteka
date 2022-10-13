@@ -3,6 +3,7 @@ package com.np.biblioteka;
 import com.np.biblioteka.mvc.MVC;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.logging.Logger;
 
 public class Biblioteka {
@@ -24,6 +25,9 @@ public class Biblioteka {
         try {
             display = new Display();
 
+            URL url = getClass().getClassLoader().getResource("music/CrazyVibes.mp3");
+            MP3Player player = new MP3Player(url);
+            player.play();
         }
         catch(IOException e) {
             logger.severe("Could not create display");
